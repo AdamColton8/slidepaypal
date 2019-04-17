@@ -44,7 +44,11 @@
   overflow: hidden;
   position: relative;
 }
-
+.web-masters-expanded{
+  transform: skewX(-10deg) translateX(25%) !important;
+  -moz-transform: skewX(-10deg) translateX(25%) !important;
+  -webkit-transform: skewX(-10deg) translateX(25%) !important;
+}
 .wrap-webmasters{
   z-index: 20;
   overflow: hidden;
@@ -71,7 +75,14 @@
     -webkit-transform: skewX(10deg);
     -webkit-transition: transform .8s;
     transition: transform .8s;
+
   }
+  .web-masters-tilt-expanded{
+    transform: skewX(10deg) translateX(-9%);
+    -moz-transform: skewX(10deg) translateX(-9%);
+    -webkit-transform: skewX(10deg) translateX(-9%)
+  }
+
 
   .web-masters-tilt {
     &:before {
@@ -85,6 +96,10 @@
       height: 100%;
       background: linear-gradient(90deg, rgba(0,48,135,0.7), rgba(0,156,222,0.7));
       opacity: 0;
+    }
+
+    .initial.active{
+      opacity: 1;
     }
     .initial {
       right: 30%;

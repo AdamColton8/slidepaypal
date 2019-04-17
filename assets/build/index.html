@@ -58,10 +58,15 @@
     $(document).ready(function() {
         $( ".wrap-webmasters" ).hover(
             function() {
-                $('.web-masters-tilt').css('display', 'none');
+
+                $('.wrap-webmasters').addClass('web-masters-expanded');
+                // $('.web-masters-tilt').addClass('web-masters-tilt-expanded');
+                $('.initial').removeClass('active');
                 // $( this ).append( $( "<span> ***</span>" ) );
             }, function() {
-                $('.web-masters-tilt').css('display', 'block');
+                $('.initial').addClass('active');
+                $('.wrap-webmasters').removeClass('web-masters-expanded');
+                // $('.web-masters-tilt').removeClass('web-masters-tilt-expanded');
                 // $( this ).find( "span:last" ).remove();
             }
         );
