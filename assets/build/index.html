@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div class="slide-container">
+    <div class="wrap">
+        <div class="wrap-webmasters">
+            <div class="web-masters">
+                <div class="web-masters-tilt">
+                    <div class="initial active">
+                        <h2>Веб-мастерам:</h2>
+                        <p>Learn how to make it easy to shop and send money to family and friends.</p>
+                        <div class="circle-item">+</div>
+                    </div>
+                    <div>
+                        Эксклюзивные офферы <br>
+                        Информативная и удобная статистика <br>
+                        Высокая конверсия <br>
+                        Индивидуальные условия <br>
+                        Круглосуточный колл-центр <br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="wrap-advertisers">
+            <div class="advertisers">
+                <div>
+                    Рекламодателям:
+                </div>
+                <div>
+                    Оплата за реальные действия клиентов <br>
+                    Клиенты на Ваши товары или услуги <br>
+                    Поддержка 24/7 <br>
+                    Бесплатная реклама <br>
+                    Контроль источников и типа трафика <br>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.4.0.js"
+        integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+        crossorigin="anonymous">
+
+</script>
+
+<script>
+    $(document).ready(function() {
+        $( ".wrap-webmasters" ).hover(
+            function() {
+                $('.web-masters-tilt').css('display', 'none');
+                // $( this ).append( $( "<span> ***</span>" ) );
+            }, function() {
+                $('.web-masters-tilt').css('display', 'block');
+                // $( this ).find( "span:last" ).remove();
+            }
+        );
+    });
+</script>
+
+
+</body>
+</html>
