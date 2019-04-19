@@ -7,8 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
+<div>
+    <header class="main-header">
+        <div class="wrap-centered">
+            <div class="containerCentered ">
+                <!--<a href="#Menu" id="menu-button" role="button">Menu</a>-->
+                <a href="/" class="strw-img-logo">Starway</a>
+                <nav id="main-menu" class="strw-main-menu" role="navigation" >
+                    <ul>
+                        <li><a href="#" id="header-personal">О системе</a></li>
+                        <li><a href="#" id="header-business">FAQ</a></li>
+                        <li><a href="#" id="header-send">Офферы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    <ul class="sublist">
+                        <li><a href="https://www.paypal.com/webapps/mpp/account-selection">Sign Up for Free</a></li>
+                    </ul>
+                </nav>
+                <div id="header-buttons" class="header-buttons">
+                    <a href="https://www.paypal.com/us/signin" class="btn btn-small btn-secondary">Вход</a>
+                    <a href="https://www.paypal.com/us/webapps/mpp/account-selection" class="btn btn-small btn-signup">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
 <div class="slide-container">
     <div class="wrap">
         <div class="wrap-webmasters">
@@ -32,19 +58,22 @@
         </div>
         <div class="wrap-advertisers">
             <div class="advertisers">
-                <div>
-                    Рекламодателям:
-                </div>
-                <div>
-                    Оплата за реальные действия клиентов <br>
-                    Клиенты на Ваши товары или услуги <br>
-                    Поддержка 24/7 <br>
-                    Бесплатная реклама <br>
-                    Контроль источников и типа трафика <br>
+                <div class="advertisers-tilt">
+                    <div class="initial active">
+                        <h2>Рекламодателям:</h2>
+                        <p>Start accepting all kinds of payments with one PayPal business account.</p>
+                        <div class="circle-item">+</div>
+                    </div>
+                    <div>
+                        Оплата за реальные действия клиентов <br>
+                        Клиенты на Ваши товары или услуги <br>
+                        Поддержка 24/7 <br>
+                        Бесплатная реклама <br>
+                        Контроль источников и типа трафика <br>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 <script
@@ -55,17 +84,31 @@
 </script>
 
 <script>
-    $(document).ready(function() {
-        $( ".wrap-webmasters" ).hover(
-            function() {
-
-                $('.wrap-webmasters').addClass('web-masters-expanded');
-                // $('.web-masters-tilt').addClass('web-masters-tilt-expanded');
+    $(document).ready(function () {
+        $(".wrap-advertisers").hover(
+            function () {
+                $('.wrap-advertisers').addClass('advertisers-expanded');
                 $('.initial').removeClass('active');
+                $('.wrap-webmasters').addClass('webmasters-collapsed');
+            },
+            function () {
+                $('.initial').addClass('active');
+                $('.wrap-advertisers').removeClass('advertisers-expanded');
+                $('.wrap-webmasters').removeClass('webmasters-collapsed');
+            }
+        );
+        $(".wrap-webmasters").hover(
+            function () {
+                $('.wrap-webmasters').addClass('web-masters-expanded');
+                $('.initial').removeClass('active');
+                $('.wrap-advertisers').addClass('advertisers-collapsed');
                 // $( this ).append( $( "<span> ***</span>" ) );
-            }, function() {
+                // $('.web-masters-tilt').addClass('web-masters-tilt-expanded');
+            },
+            function () {
                 $('.initial').addClass('active');
                 $('.wrap-webmasters').removeClass('web-masters-expanded');
+                $('.wrap-advertisers').removeClass('advertisers-collapsed');
                 // $('.web-masters-tilt').removeClass('web-masters-tilt-expanded');
                 // $( this ).find( "span:last" ).remove();
             }
