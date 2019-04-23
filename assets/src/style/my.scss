@@ -1,8 +1,9 @@
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
+
 ul, ol {
   list-style-type: none;
   padding-left: 0;
@@ -24,20 +25,22 @@ ul, ol {
   overflow: hidden;
 }
 
-.main-header{
-  border-bottom: 1px solid rgba(255,255,255,0.3);
+.main-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   max-height: 230px;
   transition: height .3s ease-out;
+
   &:before {
     content: '';
     display: block;
     width: 100%;
     position: absolute;
     height: 84px;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 100%);
     top: 0;
     z-index: -1;
   }
+
   &:after {
     //border-bottom: 1px solid rgba(255,255,255,0.3);
     content: '';
@@ -46,16 +49,18 @@ ul, ol {
     position: absolute;
     top: 72px;
   }
-  .wrap-centered{
+
+  .wrap-centered {
     position: absolute;
     z-index: 40;
     width: 100%;
     height: 72px;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.07));
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.07));
     border-bottom: 1px solid #a9a9a9;
     min-width: auto;
   }
-  .containerCentered{
+
+  .containerCentered {
     height: inherit;
     min-width: auto;
     position: relative;
@@ -67,7 +72,8 @@ ul, ol {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
   }
-  .strw-main-menu{
+
+  .strw-main-menu {
     background: none;
     border-right: none;
     min-height: 0;
@@ -84,13 +90,16 @@ ul, ol {
     padding-top: 19px;
     top: 0;
   }
-  .strw-main-menu>ul {
+
+  .strw-main-menu > ul {
     text-align: center;
     margin-top: 0;
   }
-  .strw-main-menu>ul>li {
+
+  .strw-main-menu > ul > li {
     display: inline-block;
-    a{
+
+    a {
       padding: 25px;
       color: #fff;
       font-weight: bold;
@@ -99,7 +108,8 @@ ul, ol {
       text-transform: uppercase;
       text-decoration: none;
       font-size: 14px;
-      &:hover{
+
+      &:hover {
         border-bottom: 2px solid #fff;
         color: #fff;
         outline: none;
@@ -107,10 +117,12 @@ ul, ol {
       }
     }
   }
+
   .header-buttons {
     position: absolute;
     top: 18px;
     right: 2%;
+
     .btn-secondary {
       margin-right: 8px;
       background: transparent;
@@ -120,7 +132,7 @@ ul, ol {
       cursor: pointer;
       display: inline-block;
       font-size: 12px;
-      font-family: "pp-sans-small-regular",Helvetica Neue,Arial,sans-serif;
+      font-family: "pp-sans-small-regular", Helvetica Neue, Arial, sans-serif;
       font-weight: bold;
       font-variant: normal;
       line-height: 12px;
@@ -135,6 +147,7 @@ ul, ol {
       vertical-align: middle;
       border: 1px solid white;
     }
+
     .btn-signup {
       background: #fff;
       border: none;
@@ -144,7 +157,7 @@ ul, ol {
       cursor: pointer;
       display: inline-block;
       font-size: 12px;
-      font-family: "pp-sans-small-regular",Helvetica Neue,Arial,sans-serif;
+      font-family: "pp-sans-small-regular", Helvetica Neue, Arial, sans-serif;
       font-variant: normal;
       line-height: 12px;
       min-width: 84px;
@@ -157,7 +170,8 @@ ul, ol {
       touch-action: none;
       vertical-align: middle;
       font-weight: bold;
-      &:hover{
+
+      &:hover {
         background-color: #eaeced;
       }
     }
@@ -186,10 +200,10 @@ ul, ol {
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 5px rgba(255,255,255,0);
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0);
   }
   100% {
-    box-shadow: 0 0 0 5px rgba(255,255,255,0.5)
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5)
   }
 }
 
@@ -198,20 +212,136 @@ ul, ol {
   height: 100%;
 }
 
-.wrap{
+.wrap {
   height: 580px;
   background-color: black;
   padding-top: 0 !important;
   width: 100%;
   overflow: hidden;
   position: relative;
+
+  .side-container {
+    padding-top: 72px;
+    width: 80%;
+    max-width: 1300px;
+    height: 80%;
+    position: relative;
+
+    .btn.btn-twin-hero {
+      max-width: 300px;
+      width: 35%;
+      color: #005ea6;
+      background-color: #fff;
+      padding-top: 12px;
+      padding-bottom: 14px;
+      display: inline-block;
+      border-radius: 25px;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      font-weight: bold;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+
+      &:hover {
+        background: #005ea6;
+        color: #fff;
+      }
+    }
+
+    .expanded.active {
+      opacity: 1;
+    }
+
+    .expanded {
+      position: absolute;
+      width: 85%;
+      top: 70%;
+      height: auto;
+      overflow: auto;
+      -webkit-transition: opacity .2s;
+      transition: opacity .2s;
+      opacity: 0;
+      text-align: center;
+      left: 20%;
+
+      .hero-twin-items {
+        margin: 30px 0 15px 8%;
+        overflow: auto;
+
+        .hero-twin-item {
+          float: left;
+          width: 28%;
+          margin-left: 2%;
+          margin-right: 2%;
+
+          a {
+            color: #fff;
+            text-decoration: underline;
+          }
+
+          .hero-twin-item-icon {
+            display: inline-block;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            width: 93px;
+            height: 75px;
+          }
+
+          .icon-biz-1-opt {
+            background-image: url(https://www.paypalobjects.com/digitalassets/c/website/marketing/na/us/home/hero-bifurcated-icons-refresh.png);
+          }
+
+          .icon-biz-2-opt {
+            background-image: url(https://www.paypalobjects.com/digitalassets/c/website/marketing/na/us/home/hero-bifurcated-icons-refresh.png);
+            background-position: -93px 0;
+          }
+
+          .icon-biz-3-opt {
+            background-image: url(https://www.paypalobjects.com/digitalassets/c/website/marketing/na/us/home/hero-bifurcated-icons-refresh.png);
+            background-position: 0 -79px;
+          }
+
+          div {
+            text-align: center;
+            transform: scale(.8);
+            -moz-transform: scale(.8);
+            -webkit-transform: scale(.8);
+          }
+
+          p {
+            font-size: 15px;
+            margin-top: 2px;
+          }
+        }
+      }
+
+      h2 {
+        color: #fff;
+        font-variant: normal;
+        line-height: 1.25;
+        font-size: 42px;
+        font-weight: 300;
+        margin-bottom: 0;
+      }
+
+      p {
+        color: #fff;
+        font-size: 22px;
+      }
+    }
+  }
 }
-.web-masters-expanded{
-  transform: skewX(-10deg) translateX(25%) !important;
-  -moz-transform: skewX(-10deg) translateX(25%) !important;
-  -webkit-transform: skewX(-10deg) translateX(25%) !important;
+
+.wrap-webmasters.web-masters-expanded {
+  transform: skewX(-10deg) translateX(25%);
+  -moz-transform: skewX(-10deg) translateX(25%);
+  -webkit-transform: skewX(-10deg) translateX(25%);
 }
-.wrap-webmasters{
+
+.wrap-webmasters {
   z-index: 20;
   overflow: hidden;
   position: relative;
@@ -225,8 +355,9 @@ ul, ol {
   -moz-transform: skewX(-10deg);
   -webkit-transform: skewX(-10deg);
   left: -35%;
-  box-shadow: 1px 0 10px rgba(0,0,0,0.7);
-  .web-masters{
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.7);
+
+  .web-masters {
     width: 100%;
     height: 100%;
     margin-left: 15%;
@@ -239,12 +370,12 @@ ul, ol {
     transition: transform .8s;
 
   }
-  .web-masters-tilt-expanded{
-    transform: skewX(10deg) translateX(-9%);
-    -moz-transform: skewX(10deg) translateX(-9%);
-    -webkit-transform: skewX(10deg) translateX(-9%)
-  }
 
+  .web-masters-tilt.web-masters-tilt-expanded {
+    &:before {
+      opacity: 1;
+    }
+  }
 
   .web-masters-tilt {
     &:before {
@@ -256,13 +387,14 @@ ul, ol {
       top: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, rgba(0,48,135,0.7), rgba(0,156,222,0.7));
+      background: linear-gradient(90deg, rgba(0, 48, 135, 0.7), rgba(0, 156, 222, 0.7));
       opacity: 0;
     }
 
-    .initial.active{
+    .initial.active {
       opacity: 1;
     }
+
     .initial {
       right: 25%;
       position: absolute;
@@ -273,26 +405,38 @@ ul, ol {
       transition: opacity .2s;
       opacity: 0;
       text-align: center;
-      h2{
+
+      h2 {
         color: #fff;
         font-weight: 300;
         font-size: 34px;
       }
-      p{
+
+      p {
         color: #fff;
         font-size: 22px
       }
     }
   }
 }
+
 .webmasters-collapsed {
   transform: skewX(-10deg) translateX(-25%);
   -moz-transform: skewX(-10deg) translateX(-25%);
-  -webkit-transform: skewX(-10deg) translateX(-25%)
+  -webkit-transform: skewX(-10deg) translateX(-25%);
+
+  .expanded.active {
+    opacity: 0 !important;
+  }
 }
 
+.advertisers-tilt.advertisers-tilt-expanded {
+  &:before {
+    opacity: 1;
+  }
+}
 
-.wrap-advertisers{
+.wrap-advertisers {
   width: 85%;
   height: 100%;
   position: absolute;
@@ -305,7 +449,7 @@ ul, ol {
   -moz-transform: translateX(-8%);
   -webkit-transform: translateX(-8%);
 
-  .advertisers{
+  .advertisers {
     width: 100%;
     height: 100%;
     background: url(https://www.paypalobjects.com/digitalassets/c/website/marketing/na/us/home/merchant-desktop-hero.jpg) no-repeat center center;
@@ -313,44 +457,150 @@ ul, ol {
     -webkit-transition: transform .8s;
     transition: transform .8s;
 
-   .advertisers-tilt{
-     .initial.active{
-       opacity: 1;
-     }
-     .initial {
-       left: 30%;
-       right: 30%;
-       position: absolute;
-       width: 400px;
-       padding-top: 170px;
-       height: auto;
-       -webkit-transition: opacity .2s;
-       transition: opacity .2s;
-       opacity: 0;
-       text-align: center;
+    .advertisers-tilt.advertisers-tilt-expanded {
+      &:before {
+        opacity: 1;
+      }
+    }
 
-       h2 {
-         color: #fff;
-         font-weight: 300;
-         font-size: 34px;
-       }
+    .advertisers-tilt {
+      &:before {
+        content: "";
+        -webkit-transition: opacity .8s;
+        transition: opacity .8s;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0, 156, 222, 0.7), rgba(0, 48, 135, 0.7));
+        opacity: 0;
+      }
 
-       p {
-         color: #fff;
-         font-size: 22px
-       }
-     }
-   }
+      .initial.active {
+        opacity: 1;
+      }
+
+      .initial {
+        left: 30%;
+        right: 30%;
+        position: absolute;
+        width: 400px;
+        padding-top: 98px;
+        height: auto;
+        -webkit-transition: opacity .2s;
+        transition: opacity .2s;
+        opacity: 0;
+        text-align: center;
+
+        h2 {
+          color: #fff;
+          font-weight: 300;
+          font-size: 34px;
+        }
+
+        p {
+          color: #fff;
+          font-size: 22px
+        }
+      }
+    }
   }
 }
-.advertisers-expanded{
+
+.advertisers-expanded {
   transform: translateX(-25%);
   -moz-transform: translateX(-25%);
   -webkit-transform: translateX(-25%)
 }
+
 .advertisers-collapsed {
   transform: translateX(25%);
   -moz-transform: translateX(25%);
-  -webkit-transform: translateX(25%)
+  -webkit-transform: translateX(25%);
+
+  .expanded.active {
+    opacity: 0 !important;
+  }
 }
 
+@media (min-width: 320px) and (max-width: 769px) {
+  .wrap {
+    height: 625px;
+
+    .side-container {
+      width: 100%;
+
+      .expanded {
+        width: 90%;
+        top: 20%;
+        padding: 0 5%;
+        transform: translateY(0);
+        height: auto;
+        left: 0;
+        h2{
+          font-size: 32px;
+          margin-top: 10px;
+        }
+        p{
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-size: 18px;
+        }
+        .hero-twin-items{
+          margin: 5px 0;
+          .hero-twin-item{
+            width: 100%;
+            clear: both;
+          }
+        }
+      }
+
+    }
+  }
+  .wrap-webmasters {
+    width: 100%;
+    height: 88%;
+    top: -36%;
+    left: 0;
+    transform: skewX(0);
+    -moz-transform: skewX(0);
+    -webkit-transform: skewX(0);
+
+    .web-masters-tilt {
+      width: 100%;
+      height: 100%;
+      background: url(https://www.paypalobjects.com/digitalassets/c/website/marketing/na/us/home/consumer-mobile-hero.jpg) no-repeat center 74px;
+      background-size: cover;
+      transform: translateY(13%);
+      -moz-transform: translateY(13%);
+      -webkit-transform: translateY(13%);
+      -webkit-transition: transform .8s;
+      transition: transform .8s;
+    }
+
+    .web-masters {
+      margin-left: 0;
+      transform: skewX(0);
+      -moz-transform: skewX(0);
+      -webkit-transform: skewX(0);
+    }
+  }
+
+  .wrap-webmasters.web-masters-expanded {
+    transform: translateY(25%);
+    -moz-transform: translateY(25%);
+    -webkit-transform: translateY(25%);
+  }
+  .wrap-webmasters.web-masters-tilt-expanded {
+    transform: translateY(0);
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  .initial {
+    padding: 0 5%;
+    width: 90%;
+    height: 300px;
+    top: 44%;
+  }
+}
