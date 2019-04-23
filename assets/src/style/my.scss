@@ -108,6 +108,7 @@ ul, ol {
       text-transform: uppercase;
       text-decoration: none;
       font-size: 14px;
+      text-shadow: 1px 1px 1px #000000;
 
       &:hover {
         border-bottom: 2px solid #fff;
@@ -145,11 +146,12 @@ ul, ol {
       -ms-touch-action: none;
       touch-action: none;
       vertical-align: middle;
-      border: 1px solid white;
+      border: 1px solid #ffeea8;
     }
 
     .btn-signup {
-      background: #fff;
+      //background: #fff
+      background-image: linear-gradient(to right, #ef7e2a, #fde57f);
       border: none;
       border-radius: 25px;
       box-sizing: border-box;
@@ -172,7 +174,8 @@ ul, ol {
       font-weight: bold;
 
       &:hover {
-        background-color: #eaeced;
+        //background-color: #eaeced;
+        background-image: linear-gradient(to right, #ff6c00, #ffcf00);
       }
     }
   }
@@ -228,10 +231,13 @@ ul, ol {
     position: relative;
 
     .btn.btn-twin-hero {
+      box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+      webkit-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
       max-width: 300px;
       width: 35%;
-      color: #005ea6;
-      background-color: #fff;
+      color: #2c2e2f;
+      background-image: linear-gradient(to right, #ef7e2a, #fde57f);
       padding-top: 12px;
       padding-bottom: 14px;
       display: inline-block;
@@ -246,8 +252,7 @@ ul, ol {
       -webkit-font-smoothing: antialiased;
 
       &:hover {
-        background: #005ea6;
-        color: #fff;
+        background-image: linear-gradient(to right, #ff6c00, #ffcf00);
       }
     }
 
@@ -259,7 +264,7 @@ ul, ol {
       position: absolute;
       width: 85%;
       top: 70%;
-      height: auto;
+      height: 460px;
       overflow: auto;
       -webkit-transition: opacity .2s;
       transition: opacity .2s;
@@ -268,7 +273,7 @@ ul, ol {
       left: 20%;
 
       .hero-twin-items {
-        margin: 30px 0 15px 8%;
+        margin: 30px 0 50px 8%;
         overflow: auto;
 
         .hero-twin-item {
@@ -320,6 +325,7 @@ ul, ol {
 
       h2 {
         color: #fff;
+
         font-variant: normal;
         line-height: 1.25;
         font-size: 42px;
@@ -361,7 +367,7 @@ ul, ol {
     width: 100%;
     height: 100%;
     margin-left: 15%;
-    background: url(https://www.paypalobjects.com/digitalassets/c/website/marketing/na/us/home/consumer-desktop-hero.jpg) no-repeat center center;
+    background: url(../img/10913.jpg) no-repeat;
     background-size: cover;
     transform: skewX(10deg);
     -moz-transform: skewX(10deg);
@@ -410,11 +416,13 @@ ul, ol {
         color: #fff;
         font-weight: 300;
         font-size: 34px;
+        text-shadow: 1px 1px 1px #000000;
       }
 
       p {
         color: #fff;
-        font-size: 22px
+        font-size: 22px;
+        text-shadow: 1px 1px 1px #000000;
       }
     }
   }
@@ -452,7 +460,7 @@ ul, ol {
   .advertisers {
     width: 100%;
     height: 100%;
-    background: url(https://www.paypalobjects.com/digitalassets/c/website/marketing/na/us/home/merchant-desktop-hero.jpg) no-repeat center center;
+    background: url(../img/15707.jpg) no-repeat center center;
     background-size: cover;
     -webkit-transition: transform .8s;
     transition: transform .8s;
@@ -497,11 +505,13 @@ ul, ol {
           color: #fff;
           font-weight: 300;
           font-size: 34px;
+          text-shadow: 1px 1px 1px #000000;
         }
 
         p {
           color: #fff;
-          font-size: 22px
+          font-size: 22px;
+          text-shadow: 1px 1px 1px #000000;
         }
       }
     }
@@ -523,6 +533,14 @@ ul, ol {
     opacity: 0 !important;
   }
 }
+@media (min-width: 1360px) and (max-width: 1600px) {
+  .wrap-advertisers {
+    .advertisers {
+      background-position-y: -106px;
+    }
+  }
+
+}
 
 @media (min-width: 320px) and (max-width: 769px) {
   .wrap {
@@ -538,18 +556,22 @@ ul, ol {
         transform: translateY(0);
         height: auto;
         left: 0;
-        h2{
+
+        h2 {
           font-size: 32px;
           margin-top: 10px;
         }
-        p{
+
+        p {
           margin-top: 10px;
           margin-bottom: 10px;
           font-size: 18px;
         }
-        .hero-twin-items{
+
+        .hero-twin-items {
           margin: 5px 0;
-          .hero-twin-item{
+
+          .hero-twin-item {
             width: 100%;
             clear: both;
           }
@@ -570,7 +592,7 @@ ul, ol {
     .web-masters-tilt {
       width: 100%;
       height: 100%;
-      background: url(https://www.paypalobjects.com/digitalassets/c/website/marketing/na/us/home/consumer-mobile-hero.jpg) no-repeat center 74px;
+      background: url(../img/10913.jpg) no-repeat center 74px;
       background-size: cover;
       transform: translateY(13%);
       -moz-transform: translateY(13%);
