@@ -8,24 +8,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 </head>
 <body>
 <div>
     <header class="main-header">
         <div class="wrap-centered">
             <div class="containerCentered ">
-                <!--<a href="#Menu" id="menu-button" role="button">Menu</a>-->
                 <a href="/" class="strw-img-logo">Starway</a>
                 <nav id="main-menu" class="strw-main-menu" role="navigation" >
-                    <ul>
-                        <li><a href="#" id="header-personal">О системе</a></li>
-                        <li><a href="#" id="header-business">FAQ</a></li>
-                        <li><a href="#" id="header-send">Офферы</a></li>
+                    <ul class="menu-lg">
+                        <li><a href="#">О системе</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Офферы</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
-                    <ul class="sublist">
-                        <li><a href="https://www.paypal.com/webapps/mpp/account-selection">Sign Up for Free</a></li>
-                    </ul>
+                </nav>
+                <nav class="menu-mob"  role="navigation">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <li><a href="#">О системе</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Офферы</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#" class="reg-txt">Регистрация</a></li>
+
+                        </ul>
+                    </div>
                 </nav>
                 <div id="header-buttons" class="header-buttons">
                     <a href="https://www.paypal.com/us/signin" class="btn btn-small btn-secondary">Вход</a>
@@ -42,7 +55,7 @@
                 <div class="web-masters-tilt">
                     <div class="initial active">
                         <h2>Веб-мастерам</h2>
-                        <p>Learn how to make it easy to shop and send money to family and friends.</p>
+                        <p>Получи доступ к эксклюзивным офферам с высокой конверсией уже сейчас.</p>
                         <div class="circle-item">+</div>
                     </div>
                     <div class="side-container">
@@ -60,7 +73,7 @@
                                 </div>
                                 <div class="hero-twin-item">
                                     <div data-class="icon-biz-3-opt" class="hero-twin-item-icon icon-biz-3-opt"></div>
-                                    <p>Современные выплаты </p>
+                                    <p>Своевременные выплаты </p>
                                 </div>
                             </div>
                             <a class="btn btn-white btn-twin-hero">Начать сейчас</a>
@@ -76,7 +89,7 @@
                     <div class="side-container">
                         <div class="initial active">
                             <h2>Рекламодателям</h2>
-                            <p>Start accepting all kinds of payments with one PayPal business account.</p>
+                            <p>Начни получать больше целевых клиетов на лучших условиях прямо сейчас .</p>
                             <div class="circle-item">+</div>
                         </div>
                         <div class="expanded">
@@ -104,6 +117,7 @@
         </div>
     </div>
 </div>
+
 <script
         src="https://code.jquery.com/jquery-3.4.0.js"
         integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
